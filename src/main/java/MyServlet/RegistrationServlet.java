@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import Database.ConnectionDB;
-import Models.User;
 
 @WebServlet("/RegistrationServlet")
 public class RegistrationServlet extends HttpServlet {
