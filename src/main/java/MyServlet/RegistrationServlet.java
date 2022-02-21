@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
 
-import javax.servlet.ServletException;
+import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -23,17 +23,26 @@ public class RegistrationServlet extends HttpServlet {
         String surname = request.getParameter("Surname");
         String gender = request.getParameter("Gender");
         
-		String query = "INSERT INTO users (name, surname, login, password, gender) VALUES (" + name + ", " + surname + "," + login + "," + password + "," + gender + ")";
-		
+        if (gender.equals("Man"))
+        	gender = "Man";
+        else
+        	gender = "Woman";
+        		
 		try {
 			ConnectionDB connect = new ConnectionDB();
-			Statement statement = connect.getConnection().createStatement();
-			statement.executeQuery(query);
+			String query = "INSERT INTO users (name, surname, gender, login, password) VALUES (?, ?, ?, ?, ?);";
+			
+			PreparedStatement statement = connect.dbConnector().prepareStatement(query);
+			statement.setString(1, name);
+			statement.setString(2, surname);
+			statement.setString(3, gender);
+			statement.setString(4, login);
+			statement.setString(5, password);
+			statement.executeUpdate();
+			statement.close();
 		} 
 		catch (SQLException e) {
-			e.printStackTrace();
-		} 
-		catch (ClassNotFoundException e) {
+			System.out.println("SQL запрос не выполнен!");
 			e.printStackTrace();
 		}
 		

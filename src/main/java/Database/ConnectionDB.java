@@ -3,23 +3,19 @@ package Database;
 import java.sql.*;
 
 public class ConnectionDB {	
-	String url = "jdbc:mysql://localhost:3306/design_studio";
-	String user = "root";
-	String password = "1";
+	Connection conn = null;
+	String url = "jdbc:sqlite:C:\\Users\\Вадим\\Documents\\GitHub\\Web-app\\Design_Studio.db";
 	
-	Connection con;
-
-	public ConnectionDB() throws ClassNotFoundException {
-        try {
-        	Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection(url, user, password);
-            System.out.println("Database connected!");
-        } catch (SQLException e) {
-        	throw new IllegalStateException("Cannot connect the database!", e);
-        }
-    }
-
-	public Connection getConnection() {
-		return con;
+	public Connection dbConnector() throws SQLException {
+		try {
+			Class.forName("org.sqlite.JDBC");
+			conn = DriverManager.getConnection(url);
+			return conn;
+		} 
+		catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("База данных не была подключена!");
+			return null;
+		}
 	}
 }
