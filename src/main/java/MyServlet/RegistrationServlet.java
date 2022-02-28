@@ -2,6 +2,9 @@ package MyServlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.*;
 
 import javax.servlet.*;
@@ -16,17 +19,30 @@ import Database.ConnectionDB;
 public class RegistrationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
+	private static String hushPass(String password) throws NoSuchAlgorithmException {
+		MessageDigest messageDegist = MessageDigest.getInstance("MD5");
+		messageDegist.update(password.getBytes(), 0, password.length());
+		String hushPassword = new BigInteger(1, messageDegist.digest()).toString(16);
+		
+		return hushPassword;
+	}
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String login = request.getParameter("Login");
-        String password = request.getParameter("Password");
         String name = request.getParameter("Name");
         String surname = request.getParameter("Surname");
         String gender = request.getParameter("Gender");
+        String password = request.getParameter("Password");
         
-        if (gender.equals("Man"))
-        	gender = "Man";
-        else
-        	gender = "Woman";
+        try {
+			password = hushPass(password);
+		} 
+        catch (NoSuchAlgorithmException ex) {
+			System.out.println("Хеширование пароля не произошло!");
+			ex.printStackTrace();
+		}
+        
+        gender = gender.equals("Man") ? "Man" : "Woman";
         		
 		try {
 			ConnectionDB connect = new ConnectionDB();
