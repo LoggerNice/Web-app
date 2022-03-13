@@ -19,7 +19,7 @@ import Database.ConnectionDB;
 public class RegistrationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	private static String hushPass(String password) throws NoSuchAlgorithmException {
+	public static String hushPass(String password) throws NoSuchAlgorithmException {
 		MessageDigest messageDegist = MessageDigest.getInstance("MD5");
 		messageDegist.update(password.getBytes(), 0, password.length());
 		String hushPassword = new BigInteger(1, messageDegist.digest()).toString(16);
