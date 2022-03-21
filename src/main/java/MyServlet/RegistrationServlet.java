@@ -42,7 +42,7 @@ public class RegistrationServlet extends HttpServlet {
 			ex.printStackTrace();
 		}
         
-        gender = gender.equals("Man") ? "Man" : "Woman";
+        gender = gender.equals("Man") ? "Мужской" : "Женский";
         		
 		try {
 			ConnectionDB connect = new ConnectionDB();
