@@ -10,8 +10,6 @@ import java.sql.SQLException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
-import org.junit.Test;
-
 import Database.ConnectionDB;
 
 @WebServlet("/LoginServlet")
@@ -70,7 +68,6 @@ public class LoginServlet extends HttpServlet {
 		session.setAttribute("Password", password);
 	}
 	
-    @Test
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws javax.servlet.ServletException, IOException {
     	String login = request.getParameter("Login");
         String password = request.getParameter("Password");
