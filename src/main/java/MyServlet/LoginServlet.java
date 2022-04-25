@@ -1,16 +1,15 @@
 package MyServlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.security.NoSuchAlgorithmException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
 import Database.ConnectionDB;
+import Models.User;
 
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
@@ -29,43 +28,27 @@ public class LoginServlet extends HttpServlet {
 		return rs;
 	}
 	
-	private void SetCookie(HttpServletResponse response, String name, String surname, String gender) {
+	private void SetCookie(HttpServletResponse response, String id, String name, String surname, String gender) {
+		Cookie cookieID = new Cookie("id", id);
 		Cookie cookieName = new Cookie("name", name); 
 		Cookie cookieSurname = new Cookie("surname", surname);
 		Cookie cookieGender = new Cookie("gender", gender);
 		
+		cookieID.setMaxAge(30 * 24 * 60 * 60);
 		cookieName.setMaxAge(30 * 24 * 60 * 60);
 		cookieSurname.setMaxAge(30 * 24 * 60 * 60);
 		cookieGender.setMaxAge(30 * 24 * 60 * 60);
 		
+		response.addCookie(cookieID);
 		response.addCookie(cookieName);
 		response.addCookie(cookieSurname);
 		response.addCookie(cookieGender);
 	}
-
-	private void GetCookie(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		request.setCharacterEncoding("Cp1251");           
-        response.setCharacterEncoding("Cp1251"); 
-		
-		PrintWriter out = response.getWriter();
-		Cookie [] cookies = request.getCookies();
-		
-		out.println("<h1>");
-		out.println("Привет, ");
-		for (Cookie cookie : cookies) {
-			if ("name".equals(cookie.getName()) || "surname".equals(cookie.getName())) {
-				out.println(cookie.getValue() + " ");
-			}
-			if ("gender".equals(cookie.getName()))
-				out.println("<br> Мой пол - " + cookie.getValue().toLowerCase());
-		}
-		out.println("</h1>");
-	}
     
 	private void SetSession(HttpServletRequest request, String login, String password) {
+		User user = new User(login, password);
 		HttpSession session = request.getSession();
-		session.setAttribute("Login", login);
-		session.setAttribute("Password", password);
+		session.setAttribute("currentUser", user);
 	}
 	
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws javax.servlet.ServletException, IOException {
@@ -83,19 +66,21 @@ public class LoginServlet extends HttpServlet {
 					String name = rs.getString("name");
 					String surname = rs.getString("surname");
 					String gender = rs.getString("gender");
+					int id = rs.getInt("ID");
 					
 					try {
 						String hashUser;
 						hashUser = RegistrationServlet.hushPass(password);
 						
 						if (hashUser.equals(hash)) {
-							SetCookie(response, name, surname, gender);
 							SetSession(request, login, password);
-							GetCookie(request, response);
+							SetCookie(response, String.valueOf(id), name, surname, gender);
+							
+							response.sendRedirect("index.jsp");
 						}
 						else {
 							System.out.println("Password not equals!");
-							response.sendRedirect(request.getContextPath() + "/LoginForm.html");
+							response.sendRedirect(request.getContextPath() + "/loginForm.jsp");
 						}
 						
 					} catch (NoSuchAlgorithmException e) {

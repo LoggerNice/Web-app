@@ -6,177 +6,177 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/annotations-api.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/annotations-api.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/bootstrap.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/bootstrap.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/catalina.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/catalina.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/catalina-ant.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/catalina-ant.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/catalina-ha.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/catalina-ha.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/catalina-ssi.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/catalina-ssi.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/catalina-storeconfig.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/catalina-storeconfig.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/catalina-tribes.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/catalina-tribes.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/ecj-4.20.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/ecj-4.20.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/el-api.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/el-api.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/jasper.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/jasper.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/jasper-el.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/jasper-el.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/jaspic-api.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/jaspic-api.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/jaxb-api-2.3.1.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/jaxb-api-2.3.1.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/jsp-api.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/jsp-api.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/servlet-api.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/servlet-api.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/sqlite-jdbc-3.35.0.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/sqlite-jdbc-3.35.0.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/tomcat-api.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/tomcat-api.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/tomcat-coyote.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/tomcat-coyote.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/tomcat-dbcp.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/tomcat-dbcp.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/tomcat-i18n-cs.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/tomcat-i18n-cs.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/tomcat-i18n-de.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/tomcat-i18n-de.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/tomcat-i18n-es.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/tomcat-i18n-es.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/tomcat-i18n-fr.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/tomcat-i18n-fr.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/tomcat-i18n-ja.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/tomcat-i18n-ja.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/tomcat-i18n-ko.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/tomcat-i18n-ko.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/tomcat-i18n-pt-BR.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/tomcat-i18n-pt-BR.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/tomcat-i18n-ru.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/tomcat-i18n-ru.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/tomcat-i18n-zh-CN.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/tomcat-i18n-zh-CN.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/tomcat-jdbc.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/tomcat-jdbc.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/tomcat-jni.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/tomcat-jni.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/tomcat-util.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/tomcat-util.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/tomcat-util-scan.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/tomcat-util-scan.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/tomcat-websocket.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/tomcat-websocket.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Вадим/Documents/GitHub/Web-app/modules/websocket-api.jar">
+	<classpathentry kind="lib" path="C:/Users/Vadim/Documents/Site/Web-app/src/main/webapp/WEB-INF/lib/websocket-api.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>

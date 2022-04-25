@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,6 +21,10 @@
             </div>
             <button type="submit" class="btn btn-primary">Войти</button>
         </form>
+        <p class="mt-2">
+        	Нет аккаунта?
+        	<a href="registration.jsp">Зарегистрируйся</a>
+        </p>
     </div>
 </body>
 </html>

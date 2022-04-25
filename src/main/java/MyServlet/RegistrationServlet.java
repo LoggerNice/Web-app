@@ -1,7 +1,6 @@
 package MyServlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -38,11 +37,11 @@ public class RegistrationServlet extends HttpServlet {
 			password = hushPass(password);
 		} 
         catch (NoSuchAlgorithmException ex) {
-			System.out.println("Хеширование пароля не произошло!");
+			System.out.println("Password not hushed!");
 			ex.printStackTrace();
 		}
         
-        gender = gender.equals("Man") ? "Мужской" : "Женский";
+        gender = gender.equals("Man") ? "РњСѓР¶СЃРєРѕР№" : "Р–РµРЅСЃРєРёР№";
         		
 		try {
 			ConnectionDB connect = new ConnectionDB();
@@ -58,18 +57,10 @@ public class RegistrationServlet extends HttpServlet {
 			statement.close();
 		} 
 		catch (SQLException e) {
-			System.out.println("SQL запрос не выполнен!");
+			System.out.println("SQL query not work!");
 			e.printStackTrace();
 		}
 		
-		PrintWriter out = response.getWriter();
-        out.println("<html>");
-        out.println("<head>");
-        out.println("<title>MyServlet</title>");
-        out.println("</head>");
-        out.println("<body>");
-        out.println("<h1>Users add!</h1>");
-        out.println("</body>");
-        out.println("</html>");
+		response.sendRedirect(request.getContextPath() + "/loginForm.jsp");
 	}
 }
