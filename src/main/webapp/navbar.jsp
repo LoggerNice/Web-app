@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="java.util.*" %>
+<%@ page import="Server.Sessions" %>
+<%@ page import="Models.User" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,17 +22,16 @@
           <li><a href="about.jsp" class="nav-link px-2 text-white">О нас</a></li>
           <li><a href="contact.jsp" class="nav-link px-2 text-white">Контакты</a></li>
         </ul>
-        <form class="text-end d-flex flex-wrap justify-content-lg-end" method="post" action="/web-app/Exit">
+        <form class="text-end d-flex flex-wrap justify-content-lg-end" method="get" action="/web-app/Exit">
           <%
-          Cookie [] cookies = (Cookie []) request.getCookies();
-          ArrayList<String> data = new ArrayList<String>();
-          if (session.getAttribute("currentUser") == null)
-            	out.println("<a href=\"loginForm.jsp\" class=\"btn btn-warning\">Войти</a>");
-          else { 
-        	for(Cookie cookie : cookies)
-  			  data.add(cookie.getValue());
-          	out.println("<a href=\"profile.jsp\" class=\"nav-link px-2 text-secondary me-2\"> " + data.get(0) + " " + data.get(1) + "</a> <button type=\"button\" class=\"btn btn-warning\">Выйти</button>");
-          }
+          Sessions currentSession = new Sessions();
+		  User user = new User();
+		  user = currentSession.getSession(request);
+          
+          if (currentSession.isSession(request))
+          	out.println("<a href=\"profile.jsp\" class=\"nav-link px-2 text-secondary me-2\"> " + user.getName() + " " + user.getSurname() + "</a> <button type=\"submit\" class=\"btn btn-warning\">Выйти</button>");
+          else
+            out.println("<a href=\"loginForm.jsp\" class=\"btn btn-warning\">Войти</a>");
           %>
         </form>
       </div>

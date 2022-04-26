@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="Database.Course" %>
+<%@ page import="Models.User" %>
+<%@ page import="Server.Sessions" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -57,7 +59,21 @@
                             </div>
                         </div>
                     </div>
-                    <button class="btn btn-primary py-3 px-5 mt-2" type="submit">Записаться</button>
+                    <%
+                    Sessions s = new Sessions();
+          		    User u = new User();
+          		    u = s.getSession(request);
+                    Course c = new Course();
+                    
+                    if (s.isSession(request)) {                    	
+	                    if (c.checkUser(u.getId()))
+	                    	out.println("<button class=\"btn btn-primary py-3 px-5 mt-2\">Вы уже записаны</button>");
+	                    else
+	                    	out.println("<button class=\"btn btn-primary py-3 px-5 mt-2\" type=\"submit\">Записаться</button>");
+                    }
+                    else
+                    	out.println("<button class=\"btn btn-primary py-3 px-5 mt-2\" type=\"submit\">Записаться</button>");
+                    %>
                 </form>
              </div>
         </div>
