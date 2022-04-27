@@ -21,6 +21,7 @@ public class RegistrationServlet extends HttpServlet {
         String surname = request.getParameter("Surname");
         String gender = request.getParameter("Gender");
         String password = request.getParameter("Password");
+        String city = request.getParameter("City");
         
         try {
 			password = user.hushPass(password);
@@ -33,7 +34,7 @@ public class RegistrationServlet extends HttpServlet {
         gender = gender.equals("Man") ? "Мужской" : "Женский";
         		
 		try {
-			user.insertUser(login, password, name, surname, gender);
+			user.insertUser(login, password, name, surname, gender, city);
 		} 
 		catch (SQLException e) {
 			System.out.println("SQL query not work!");

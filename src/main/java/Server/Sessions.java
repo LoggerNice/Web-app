@@ -11,8 +11,8 @@ import Models.User;
 public class Sessions {
 	private User user = new User();
 	
-	public void setSession(HttpServletRequest request, int id, String login, String password, String name, String surname, String gender) {
-		user = new User(id, login, password, name, surname, gender);
+	public void setSession(HttpServletRequest request, int id, String login, String password, String name, String surname, String gender, String city) {
+		user = new User(id, login, password, name, surname, gender, city);
 		HttpSession session = request.getSession();
 		session.setAttribute("currentUser", user);
 	}

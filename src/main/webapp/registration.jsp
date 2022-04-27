@@ -23,6 +23,11 @@
 		      <div class="invalid-feedback">Пожалуйста, укажите фамилию</div>
 		    </div>
 		    <div class="mb-3">
+		      <label for="validationServer02">Ваш город</label>
+		      <input name="City" type="text" class="form-control" id="validationServer03" placeholder="Город" value="" required>
+		      <div class="invalid-feedback">Пожалуйста, укажите ваш город</div>
+		    </div>
+		    <div class="mb-3">
 		      <label for="validationServerUsername">Ваш логин</label>
 		      <div class="input-group">
 		        <div class="input-group-prepend">

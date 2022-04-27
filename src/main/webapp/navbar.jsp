@@ -19,7 +19,7 @@
         <ul class="nav mb-2 mb-md-0">
           <li><a href="index.jsp" class="nav-link px-2 text-secondary">Главная</a></li>
           <li><a href="course.jsp" class="nav-link px-2 text-white">Вебинары</a></li>
-          <li><a href="about.jsp" class="nav-link px-2 text-white">О нас</a></li>
+          <li><a href="review.jsp" class="nav-link px-2 text-white">Отзывы</a></li>
           <li><a href="contact.jsp" class="nav-link px-2 text-white">Контакты</a></li>
         </ul>
         <form class="text-end d-flex flex-wrap justify-content-lg-end" method="get" action="/web-app/Exit">

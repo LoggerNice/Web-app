@@ -7,16 +7,18 @@ public class User {
 	private String name;
 	private String surname;
 	private String gender;
+	private String city;
 	
 	public User() {
 	}
-	public User(int id, String login, String password, String name, String surname, String gender) {
+	public User(int id, String login, String password, String name, String surname, String gender, String city) {
 		this.id = id;
 		this.login = login;
 		this.password = password;
 		this.name = name;
 		this.surname = surname;
 		this.gender = gender;
+		this.city = city;
 	}
 	
 	public String getLogin() {
@@ -59,5 +61,12 @@ public class User {
 	}
 	public void setId(int id) {
 		this.id = id;
+	}
+	
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
 	}
 }

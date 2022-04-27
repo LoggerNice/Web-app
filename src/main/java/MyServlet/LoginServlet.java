@@ -31,6 +31,7 @@ public class LoginServlet extends HttpServlet {
 					String name = rs.getString("name");
 					String surname = rs.getString("surname");
 					String gender = rs.getString("gender");
+					String city = rs.getString("city");
 					int id = rs.getInt("ID");
 					
 					try {
@@ -38,7 +39,7 @@ public class LoginServlet extends HttpServlet {
 						hashUser = user.hushPass(password);
 						
 						if (hashUser.equals(hash)) {
-							session.setSession(request, id, login, password, name, surname, gender);
+							session.setSession(request, id, login, password, name, surname, gender, city);
 							response.sendRedirect("index.jsp");
 						}
 						else {
