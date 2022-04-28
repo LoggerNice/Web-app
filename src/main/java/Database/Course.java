@@ -21,7 +21,7 @@ public class Course {
 		return count;
 	}
 	
-	public void addUser(int id) throws SQLException {
+	public void add(int id) throws SQLException {
 		String query = "INSERT INTO course (user_id) VALUES (?);";
 		
 		PreparedStatement statement = connect.dbConnector().prepareStatement(query);
@@ -30,7 +30,7 @@ public class Course {
 		statement.close();
 	}
 	
-	public boolean checkUser(int id) throws SQLException {
+	public boolean check(int id) throws SQLException {
 		String query = "SELECT COUNT(id) FROM course WHERE user_id = " + id;
 		Statement statement = connect.dbConnector().createStatement();
 		ResultSet rs = statement.executeQuery(query);

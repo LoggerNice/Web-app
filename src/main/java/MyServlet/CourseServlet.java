@@ -26,7 +26,7 @@ public class CourseServlet extends HttpServlet {
 		if (session.isSession(request)) {
 			try {
 				user = session.getSession(request);
-				course.addUser(user.getId());
+				course.add(user.getId());
 				
 				System.out.println("Пользователь с id: " + user.getId() + " был добавлен!");
 				response.sendRedirect(request.getContextPath() + "/course.jsp");
