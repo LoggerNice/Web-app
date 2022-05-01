@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="Database.Image"%>
+<%@ page import="java.util.*"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,8 +15,12 @@
 
 <%@ include file="navbar.jsp"%>
 
-<body>
-	<section class="h-100 gradient-custom-2">
+<body style="background-color: #e7effd;">
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"></script>
+	<section class="h-100">
 		<div class="container py-5 h-100">
 			<div
 				class="row d-flex justify-content-center align-items-center h-100">
@@ -23,7 +29,8 @@
 						<div class="rounded-top text-white d-flex flex-row bg-dark"
 							style="height: 200px;">
 							<div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
-								<img src="./picture/user.svg" alt="Generic placeholder image"
+								<img src="./avatar/<%=user.getPhoto()%>"
+									alt="Generic placeholder image"
 									class="img-fluid img-thumbnail mt-4 mb-2"
 									style="width: 150px; z-index: 1"> <a
 									href="editProfile.jsp" class="btn btn-outline-dark"
@@ -32,60 +39,68 @@
 							</div>
 							<div class="ms-3" style="margin-top: 130px;">
 								<h5>
-									<%= user.getName() + " " + user.getSurname() %>
+									<%=user.getName() + " " + user.getSurname()%>
 								</h5>
 								<p>
-									<%= user.getCity() %>
+									<%=user.getCity()%>
 								</p>
 							</div>
 						</div>
 						<div class="p-4 text-black" style="background-color: #f8f9fa;">
 							<div class="d-flex justify-content-end text-center py-1">
 								<div>
-									<p class="mb-1 h5">253</p>
-									<p class="small text-muted mb-0">Работ</p>
+									<%
+									Image img = new Image();
+									ArrayList<String> images = new ArrayList<String>();
+									images = img.getWorks(user.getId());
+									%>
+									<p class="mb-1 h5"><%=images.size()%></p>
+									<p class="small text-muted mb-0">Проекты</p>
 								</div>
 								<div class="px-3">
-									<p class="mb-1 h5"><%= user.getGender() %></p>
+									<p class="mb-1 h5"><%=user.getGender()%></p>
 									<p class="small text-muted mb-0">Пол</p>
 								</div>
 							</div>
 						</div>
-						<div class="input-group">
-							<input type="file" class="form-control" id="inputGroupFile04"
-								aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-							<button class="btn btn-outline-secondary" type="button"
-								id="inputGroupFileAddon04">Button</button>
-						</div>
+						<form class="input-group px-4" method="post"
+							action="/web-app/UploadServlet" enctype="multipart/form-data">
+							<input type="file" class="form-control" name="img"
+								id="inputGroupFile04" aria-describedby="inputGroupFileAddon04"
+								aria-label="Upload">
+							<button class="btn btn-outline-secondary" type="submit"
+								id="inputGroupFileAddon04">Загрузить</button>
+						</form>
 						<div class="d-flex justify-content-between align-items-center m-4">
 							<p class="lead fw-normal mb-0">Загруженные работы</p>
-							<p class="mb-0">
-								<a href="/web-app/WorksServlet" class="text-muted">Посмотреть
-									все</a>
-							</p>
 						</div>
-						<div class="row g-2">
-							<div class="col mb-2">
-								<img
-									src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp"
-									alt="image 1" class="w-100 rounded-3">
-							</div>
-							<div class="col mb-2">
-								<img
-									src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(107).webp"
-									alt="image 1" class="w-100 rounded-3">
-							</div>
-						</div>
-						<div class="row g-2">
-							<div class="col">
-								<img
-									src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(108).webp"
-									alt="image 1" class="w-100 rounded-3">
-							</div>
-							<div class="col">
-								<img
-									src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(114).webp"
-									alt="image 1" class="w-100 rounded-3">
+
+						<div id="carouselExampleFade" class="carousel slide carousel-fade"
+							data-bs-ride="carousel">
+							<div class="carousel-inner px-4 mb-4">
+								<%
+								String path = "./works/";
+
+								for (int i = 0; i < images.size(); i++) {
+									if (i == 0)
+										out.print("<div class=\"carousel-item active\">");
+									else
+										out.print("<div class=\"carousel-item\">");
+
+									out.print("<img src=\"" + path + images.get(i) + "\" alt=\"image 1\" class=\"d-block w-100\">");
+									out.print("</div>");
+								}
+								%>
+								<button class="carousel-control-prev" type="button"
+									data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+									<span class="visually-hidden">Previous</span>
+								</button>
+								<button class="carousel-control-next" type="button"
+									data-bs-target="#carouselExampleFade" data-bs-slide="next">
+									<span class="carousel-control-next-icon" aria-hidden="true"></span>
+									<span class="visually-hidden">Next</span>
+								</button>
 							</div>
 						</div>
 					</div>

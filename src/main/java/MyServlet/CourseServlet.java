@@ -18,8 +18,6 @@ public class CourseServlet extends HttpServlet {
 	private User user = new User();
 	private Course course = new Course();
 	
-	//СДЕЛАТЬ УНИКАЛЬНОСТЬ ЗАПИСЕЙ РЕГИСТРАЦИИ 
-	
 	//Сервлет для записи на курс
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		

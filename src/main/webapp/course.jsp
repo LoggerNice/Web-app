@@ -67,7 +67,7 @@
                     
                     if (s.isSession(request)) {                    	
 	                    if (c.check(u.getId()))
-	                    	out.println("<button class=\"btn btn-primary py-3 px-5 mt-2\">Вы уже записаны</button>");
+	                    	out.println("<div class=\"btn btn-primary py-3 px-5 mt-2\">Вы уже записаны</div>");
 	                    else
 	                    	out.println("<button class=\"btn btn-primary py-3 px-5 mt-2\" type=\"submit\">Записаться</button>");
                     }

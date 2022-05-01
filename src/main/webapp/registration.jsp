@@ -1,3 +1,5 @@
+<%@page import="java.util.Random"%>
+<%@page import="Models.Kapcha"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -8,8 +10,8 @@
 </head>
 <body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/jbootstrap.bundle.min.js"></script>
-    <div class="position-absolute top-50 start-50 translate-middle">
-        <h1 class="position-absolute top-0 start-50 translate-middle">Регистрация</h1>
+    <div class="container mt-5 px-5 w-50">
+        <h1 style="text-align:center">Регистрация</h1>
         <form class="mt-5 was-validated" method="post" action="/web-app/RegistrationServlet">
           <div class="form-row">
 		    <div class="mb-3">
@@ -62,13 +64,23 @@
 		      <label class="custom-control-label" for="customControlValidation3">Женский</label>
 		      <div class="invalid-feedback">Пожалуйста, выберите пол</div>
 		    </div>
+		    <div class="form-row">
+		    <div class="mb-3">
+		      <label for="validationServer03">Решите пример:
+		      <%
+		      Kapcha kap = new Kapcha();
+		      %>
+		      <%= kap.getMath() %>
+		      </label>
+		      <input name="Result" type="text" class="form-control" id="validationServer03" placeholder="Ответ" required>
+		      <div class="invalid-feedback">Пожалуйста, введите ответ</div>
+		    </div>
+		      <input name="Kapcha" type="hidden" value="<%= kap.getResult()%>">
+		  </div>
 		  </div>
 		  <button class="btn btn-primary" type="submit">Зарегистрироваться</button>
         </form>
-        <p class="mt-2">
-        	Уже есть аккаунт?
-        	<a href="loginForm.jsp">Авторизоваться</a>
-        </p>
+        <p class="mt-2"> Уже есть аккаунт? <a href="loginForm.jsp">Авторизоваться</a> </p>
     </div>
 </body>
 </html>

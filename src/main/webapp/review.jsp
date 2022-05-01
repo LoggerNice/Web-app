@@ -23,8 +23,7 @@
 				<div class="col-md-11 col-lg-9 col-xl-7">
 					<div class="card w-100 mb-5">
 						<div class="card-body p-4">
-							<h5 class="mb-4" style="text-align: center;">Новый
-								комментарий</h5>
+							<h5 class="mb-4" style="text-align: center;">Новый комментарий</h5>
 							<form method="post" action="/web-app/ReviewServlet"
 								style="<% if (currentSession.isSession(request)) out.println(""); else out.println("display:none"); %>">
 								<div class="row">
@@ -42,8 +41,7 @@
 										type="submit">Добавить</button>
 								</div>
 							</form>
-							<div
-								style="<% if (currentSession.isSession(request)) out.println("display:none"); else out.println(""); %>">
+							<div style="<% if (currentSession.isSession(request)) out.println("display:none"); else out.println(""); %>">
 								<p style="text-align: center;">
 									Пожалуйста, <a href="loginForm.jsp">авторизируйтесь</a>
 								</p>
@@ -58,7 +56,7 @@
 					
 					for(Comment c: comment) {
 						out.print("<div class=\"d-flex flex-start mb-4\">");	
-						out.print("<img class=\"rounded-circle shadow-1-strong me-3\" src=\"https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).webp\" alt=\"avatar\" width=\"65\" height=\"65\" />");
+						out.print("<img class=\"rounded-circle shadow-1-strong me-3\" src=\"./avatar/"+ c.getPhoto() +"\" alt=\"avatar\" width=\"65\" height=\"65\" />");
 						out.print("<div class=\"card w-100\">");
 						out.print("<div class=\"card-body p-4\">");
 						out.print("<div>");

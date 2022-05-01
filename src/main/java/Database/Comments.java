@@ -26,7 +26,7 @@ public class Comments {
 		
 		ResultSet rs = null;
 		
-		String query = "SELECT comment.text, comment.date, users.name, users.surname FROM comment JOIN users ON users.ID = comment.user_id;";
+		String query = "SELECT comment.text, comment.date, users.name, users.surname, users.photo FROM comment JOIN users ON users.ID = comment.user_id;";
 		Statement statement = connect.dbConnector().createStatement();
 		rs = statement.executeQuery(query);
 		
@@ -38,7 +38,8 @@ public class Comments {
 				String date = rs.getString("date");
 				String name = rs.getString("name");
 				String surname = rs.getString("surname");
-				comment.add(new Comment(text, date, name, surname));
+				String photo = rs.getString("photo");
+				comment.add(new Comment(text, date, name, surname, photo));
 			}
 		}
 		

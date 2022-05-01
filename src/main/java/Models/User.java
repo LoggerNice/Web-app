@@ -8,9 +8,10 @@ public class User {
 	private String surname;
 	private String gender;
 	private String city;
+	private String photo;
 	
 	public User() {}
-	public User(int id, String login, String password, String name, String surname, String gender, String city) {
+	public User(int id, String login, String password, String name, String surname, String gender, String city, String photo) {
 		this.id = id;
 		this.login = login;
 		this.password = password;
@@ -18,6 +19,7 @@ public class User {
 		this.surname = surname;
 		this.gender = gender;
 		this.city = city;
+		this.photo = photo;
 	}
 	
 	public String getLogin() {
@@ -67,5 +69,11 @@ public class User {
 	}
 	public void setCity(String city) {
 		this.city = city;
+	}
+	public String getPhoto() {
+		return photo;
+	}
+	public void setPhoto(String photo) {
+		this.photo = photo;
 	}
 }

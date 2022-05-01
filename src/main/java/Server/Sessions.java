@@ -11,8 +11,8 @@ import Models.User;
 public class Sessions {
 	private User user = new User();
 	
-	public void setSession(HttpServletRequest request, int id, String login, String password, String name, String surname, String gender, String city) {
-		user = new User(id, login, password, name, surname, gender, city);
+	public void setSession(HttpServletRequest request, int id, String login, String password, String name, String surname, String gender, String city, String photo) {
+		user = new User(id, login, password, name, surname, gender, city, photo);
 		HttpSession session = request.getSession();
 		session.setAttribute("currentUser", user);
 	}
@@ -32,7 +32,5 @@ public class Sessions {
 	public void deleteSession(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		HttpSession session = request.getSession();
 		session.invalidate();
-		
-		response.sendRedirect(request.getContextPath() + "/index.jsp");
 	}
 }

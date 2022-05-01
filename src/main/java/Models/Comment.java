@@ -5,13 +5,15 @@ public class Comment {
 	private String date;
 	private String name;
 	private String surname;
+	private String photo;
 	
 	public Comment() {}
-	public Comment(String text, String date, String name, String surname) {
+	public Comment(String text, String date, String name, String surname, String photo) {
 		this.setText(text);
 		this.setDate(date);
 		this.setName(name);
 		this.setSurname(surname);
+		this.setPhoto(photo);
 	}
 
 	public String getText() {
@@ -40,6 +42,12 @@ public class Comment {
 	}
 	public void setSurname(String surname) {
 		this.surname = surname;
+	}
+	public String getPhoto() {
+		return photo;
+	}
+	public void setPhoto(String photo) {
+		this.photo = photo;
 	}
 	
 }

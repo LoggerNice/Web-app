@@ -18,8 +18,8 @@ public class Users {
 		return rs;
 	}
 	
-	public void insertUser(String login, String password, String name, String surname, String gender, String city) throws SQLException {
-		String query = "INSERT INTO users (name, surname, gender, login, password, city) VALUES (?, ?, ?, ?, ?, ?);";
+	public void insertUser(String login, String password, String name, String surname, String gender, String city, String photo) throws SQLException {
+		String query = "INSERT INTO users (name, surname, gender, login, password, city, photo) VALUES (?, ?, ?, ?, ?, ?, ?);";
 		
 		PreparedStatement statement = connect.dbConnector().prepareStatement(query);
 		statement.setString(1, name);
@@ -28,6 +28,20 @@ public class Users {
 		statement.setString(4, login);
 		statement.setString(5, password);
 		statement.setString(6, city);
+		statement.setString(7, photo);
+		statement.executeUpdate();
+		statement.close();
+	}
+	
+	public void updateUser(String name, String surname, String city, String photo, int id) throws SQLException {
+		String query = "UPDATE users SET name=?, surname=?, city=?, photo=? WHERE ID = ?";
+		
+		PreparedStatement statement = connect.dbConnector().prepareStatement(query);
+		statement.setString(1, name);
+		statement.setString(2, surname);
+		statement.setString(3, city);
+		statement.setString(4, photo);
+		statement.setInt(5, id);
 		statement.executeUpdate();
 		statement.close();
 	}

@@ -14,5 +14,6 @@ public class Exit extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Sessions session = new Sessions();
 		session.deleteSession(request, response);
+		response.sendRedirect(request.getContextPath() + "/index.jsp");
 	}
 }
