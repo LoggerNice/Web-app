@@ -24,7 +24,7 @@
 					<div class="card w-100 mb-5">
 						<div class="card-body p-4">
 							<h5 class="mb-4" style="text-align: center;">Новый комментарий</h5>
-							<form method="post" action="/web-app/ReviewServlet"
+							<form method="post" action="ReviewServlet"
 								style="<% if (currentSession.isSession(request)) out.println(""); else out.println("display:none"); %>">
 								<div class="row">
 									<div class="col-md-12">

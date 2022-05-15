@@ -22,7 +22,7 @@
 	<div class="container mt-5 px-5 w-50">
 		<h1 style="text-align: center">Редактирование данных</h1>
 		<form class="mt-5 was-validated" method="post"
-			action="/web-app/EditServlet" enctype="multipart/form-data"
+			action="EditServlet" enctype="multipart/form-data"
 			style="<% if (s.isSession(request)) out.println(""); else out.println("display:none"); %>">
 			<div class="form-row">
 				<div class="mb-3">

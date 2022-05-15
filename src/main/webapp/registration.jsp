@@ -12,7 +12,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/jbootstrap.bundle.min.js"></script>
     <div class="container mt-5 px-5 w-50">
         <h1 style="text-align:center">Регистрация</h1>
-        <form class="mt-5 was-validated" method="post" action="/web-app/RegistrationServlet">
+        <form class="mt-5 was-validated" method="post" action="RegistrationServlet">
           <div class="form-row">
 		    <div class="mb-3">
 		      <label for="validationServer01">Ваше имя</label>

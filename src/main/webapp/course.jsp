@@ -34,7 +34,7 @@
                            </div>
                        </div>
                    </div>
-                   <form class="col-lg-6" method="get" action="/web-app/CourseServlet">
+                   <form class="col-lg-6" method="get" action="CourseServlet">
                        <h5 class="section-title ff-secondary text-start text-primary fw-normal">О вебинаре</h5>
                        <h1 class="mb-4">Веб-дизайнер 2.0</h1>
                        <p class="mb-4">Освой основы профессии веб-дизайнера с нуля, за 7 дней под присмотром профессионала, с домашними заданиями и постоянной практикой.</p>

@@ -13,7 +13,7 @@ public class Comments {
 	private ArrayList<Comment> comment = new ArrayList<Comment>(); 
 	
 	public void add(int id, String text) throws SQLException {
-		String query = "INSERT INTO comment (text, user_id, date) VALUES (?,?,date())";
+		String query = "INSERT INTO comment (text, date, user_id) VALUES (?, CURDATE(), ? );";
 		
 		PreparedStatement statement = connect.dbConnector().prepareStatement(query);
 		statement.setString(1, text);
