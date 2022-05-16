@@ -64,7 +64,7 @@
 							</div>
 						</div>
 						<form class="input-group px-4" method="post"
-							action="UploadServlet" enctype="multipart/form-data">
+							action="/web-app/UploadServlet" enctype="multipart/form-data">
 							<input type="file" class="form-control" name="img"
 								id="inputGroupFile04" aria-describedby="inputGroupFileAddon04"
 								aria-label="Upload">

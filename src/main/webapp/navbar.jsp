@@ -22,7 +22,7 @@
           <li><a href="review.jsp" class="nav-link px-2 text-white">Отзывы</a></li>
           <li><a href="contact.jsp" class="nav-link px-2 text-white">Контакты</a></li>
         </ul>
-        <form class="text-end d-flex flex-wrap justify-content-lg-end" method="get" action="Exit">
+        <form class="text-end d-flex flex-wrap justify-content-lg-end" method="get" action="/web-app/Exit">
           <%
           Sessions currentSession = new Sessions();
 		  User user = new User();
