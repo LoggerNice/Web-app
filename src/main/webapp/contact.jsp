@@ -22,7 +22,7 @@
 
 			<div class="row">
 				<div class="col-md-9 mb-md-0 mb-5">
-					<form id="contact-form" name="contact-form" action="MailServlet" method="post">
+					<form id="contact-form" name="contact-form" action="/web-app/MailServlet" method="post">
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-floating mb-3">

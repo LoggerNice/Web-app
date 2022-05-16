@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <div class="position-absolute top-50 start-50 translate-middle">
         <h1>Авторизация</h1>
-        <form class="mt-5" method="post" action="LoginServlet">
+        <form class="mt-5" method="post" action="/web-app/LoginServlet">
             <div class="mb-3">
                 <label for="log" class="form-label">Логин</label>
                 <input placeholder="Ваш логин" name="Login" type="text" class="form-control" id="log">
