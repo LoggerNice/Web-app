@@ -15,6 +15,7 @@ public class Sessions {
 		user = new User(id, login, password, name, surname, gender, city, photo);
 		HttpSession session = request.getSession();
 		session.setAttribute("currentUser", user);
+		session.setMaxInactiveInterval(60*60*24);
 	}
 	
 	public User getSession(HttpServletRequest request) {
